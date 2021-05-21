@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Use tfjs model.predict in a chrome extension",
   "scripts": {
-    "copy": "cp src/content.js dist/src/ && cp src/imagenet_classes.js dist/src/",
+    "copy": "cp src/content.js dist/src/ && cp src/content-main.js dist/src/ && cp src/content2.js dist/src/ && cp src/content-get-device-access.js dist/src/",
     "build": "parcel build src/background.js -d dist/src/ -o background --no-minify && npm run copy",
     "watch": "npm run copy && parcel watch src/background.js --hmr-hostname localhost -d dist/src/ -o background"
   },
@@ -22,6 +22,11 @@
     "vega": "5.17.3"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^1.3.2"
+    "@tensorflow-models/coco-ssd": "^2.2.2",
+    "@tensorflow-models/handpose": "0.0.7",
+    "@tensorflow/tfjs": "^1.3.2",
+    "@tensorflow/tfjs-backend-webgl": "^3.6.0",
+    "@tensorflow/tfjs-converter": "^3.6.0",
+    "@tensorflow/tfjs-core": "^3.6.0"
   }
 }
